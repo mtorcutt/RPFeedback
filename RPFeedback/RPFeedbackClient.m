@@ -70,7 +70,7 @@ NSString * const ReviewPushLocationFormatURLString = @"locations/%@";
 - (void)POSTFeedback:(Feedback *)review completion:(void (^)(BOOL success, Feedback *feedBack, NSDictionary *reviewSiteLinks, NSString *errorString))completionBlock {
     
     NSDictionary *dictionary = @{ @"review"      : [NSString stringWithFormat:@"%@", review.feedback],
-                                  @"rating"      : [NSString stringWithFormat:@"%li", review.ratingValue],
+                                  @"rating"      : @(review.ratingValue),
                                   @"email"       : [NSString stringWithFormat:@"%@", review.emailAddress],
                                   @"location_id" : [NSString stringWithFormat:@"%@", review.location.identifier],
                                   @"reviewer"    : [NSString stringWithFormat:@"%@", review.fullName] };
@@ -78,8 +78,6 @@ NSString * const ReviewPushLocationFormatURLString = @"locations/%@";
     NSDictionary *parameters = [self authorizedParameterDictionaryWithDictionary:dictionary];
     
     [self POST:ReviewPushFeedbackURLString parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
-        
-        NSLog(@"responseObject %@", responseObject);
         
         if(!completionBlock) {
             return;
@@ -155,9 +153,6 @@ NSString * const ReviewPushLocationFormatURLString = @"locations/%@";
      
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
-        NSLog(@"failure = %@", operation.responseObject);
-        NSLog(@"error = %@", error);
-
         if(completionBlock) {
             completionBlock(NO, nil, nil);
         }

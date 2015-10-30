@@ -38,11 +38,12 @@ s.dependency 'JSONModel'
 s.dependency 'SZTextView'
 
 # 8
-s.source_files = "RPFeedback/**/*.h"
+s.source_files = "RPFeedback/**/*.{h,m}"
 
 # 9
-s.resources = "RPFeedback/**/*.{png,jpeg,jpg,storyboard,xib}"
-end
+# s.resources = "RPFeedback/**/*.{png,jpeg,jpg,storyboard,xib}"
 
 # 10
-spec.requires_arc = true
+s.requires_arc = true
+
+end
