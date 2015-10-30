@@ -11,7 +11,7 @@ s.requires_arc = true
 s.version = "0.1.0"
 
 # 3
-s.license = { :type => "MIT", :file => "LICENSE" }
+s.license = "MIT"
 
 # 4 - Replace with your name and e-mail address
 s.author = { "Michael Orcutt" => "michaeltorcutt@gmail.com" }
@@ -40,7 +40,7 @@ s.dependency 'Alamofire', '~> 1.1'
 s.dependency 'MBProgressHUD', '~> 0.9.0'
 
 # 8
-s.source_files = "RPFeedback/**/*.{swift}"
+s.source_files = "RPFeedback/**/*.h,m"
 
 # 9
 s.resources = "RPFeedback/**/*.{png,jpeg,jpg,storyboard,xib}"
