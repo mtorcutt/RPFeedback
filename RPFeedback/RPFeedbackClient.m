@@ -70,7 +70,7 @@ NSString * const ReviewPushLocationFormatURLString = @"locations/%@";
 - (void)POSTFeedback:(Feedback *)review completion:(void (^)(BOOL success, Feedback *feedBack, NSDictionary *reviewSiteLinks, NSString *errorString))completionBlock {
     
     NSDictionary *dictionary = @{ @"review"      : [NSString stringWithFormat:@"%@", review.feedback],
-                                  @"rating"      : @(review.ratingValue),
+                                  @"rating"      : [NSString stringWithFormat:@"%ld", (long)review.ratingValue],
                                   @"email"       : [NSString stringWithFormat:@"%@", review.emailAddress],
                                   @"location_id" : [NSString stringWithFormat:@"%@", review.location.identifier],
                                   @"reviewer"    : [NSString stringWithFormat:@"%@", review.fullName] };
