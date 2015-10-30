@@ -30,18 +30,19 @@ s.homepage = "http://reviewpush.com"
 # 6 - Replace this URL with your own Git URL from "Quick Setup"
 s.source = { :git => "https://github.com/mtorcutt/RPFeedback.git", :tag => "#{s.version}"}
 
-# For example,
-# s.source = { :git => "https://github.com/JRG-Developer/RPFeedback.git", :tag => "#{s.version}"}
-
-
 # 7
 s.framework = "UIKit"
-s.dependency 'Alamofire', '~> 1.1'
-s.dependency 'MBProgressHUD', '~> 0.9.0'
+s.dependency 'AFNetworking'
+s.dependency 'INTULocationManager'
+s.dependency 'JSONModel'
+s.dependency 'SZTextView'
 
 # 8
-s.source_files = "RPFeedback/**/*.h,m"
+s.source_files = "RPFeedback/**/*.h"
 
 # 9
 s.resources = "RPFeedback/**/*.{png,jpeg,jpg,storyboard,xib}"
 end
+
+# 10
+spec.requires_arc = true
