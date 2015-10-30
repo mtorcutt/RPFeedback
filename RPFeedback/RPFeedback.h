@@ -8,12 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-//! Project version number for RPFeedback.
-FOUNDATION_EXPORT double RPFeedbackVersionNumber;
+//! Project version number for ReviewPushFeedback.
+FOUNDATION_EXPORT double ReviewPushFeedbackVersionNumber;
 
-//! Project version string for RPFeedback.
-FOUNDATION_EXPORT const unsigned char RPFeedbackVersionString[];
+//! Project version string for ReviewPushFeedback.
+FOUNDATION_EXPORT const unsigned char ReviewPushFeedbackVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <RPFeedback/PublicHeader.h>
-
-
+#import <ReviewPushFeedback/RPFeedbackClient.h>

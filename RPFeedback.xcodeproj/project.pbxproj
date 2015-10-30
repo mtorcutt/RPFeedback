@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4CB3FD431BE32927005E1496 /* RPFeedback.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB3FD421BE32927005E1496 /* RPFeedback.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F263A45E197BE6811966C0C /* libPods-RPFeedback.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AD5A96B8BF0FFCDB61D9673 /* libPods-RPFeedback.a */; };
 		4CB3FD4A1BE32927005E1496 /* RPFeedback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB3FD3F1BE32927005E1496 /* RPFeedback.framework */; settings = {ASSET_TAGS = (); }; };
 		4CB3FD4F1BE32927005E1496 /* RPFeedbackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB3FD4E1BE32927005E1496 /* RPFeedbackTests.m */; };
+		4CB3FD5F1BE32C7C005E1496 /* RPFeedbackClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB3FD5D1BE32C7C005E1496 /* RPFeedbackClient.h */; settings = {ASSET_TAGS = (); }; };
+		4CB3FD601BE32C7C005E1496 /* RPFeedbackClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB3FD5E1BE32C7C005E1496 /* RPFeedbackClient.m */; settings = {ASSET_TAGS = (); }; };
+		4CB3FD6E1BE32DF7005E1496 /* RPFeedback.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB3FD6D1BE32DF7005E1496 /* RPFeedback.h */; settings = {ASSET_TAGS = (); }; };
+		4CB3FD751BE32E74005E1496 /* Feedback.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB3FD6F1BE32E74005E1496 /* Feedback.h */; settings = {ASSET_TAGS = (); }; };
+		4CB3FD761BE32E74005E1496 /* Feedback.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB3FD701BE32E74005E1496 /* Feedback.m */; settings = {ASSET_TAGS = (); }; };
+		4CB3FD771BE32E74005E1496 /* ReviewSite.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB3FD711BE32E74005E1496 /* ReviewSite.h */; settings = {ASSET_TAGS = (); }; };
+		4CB3FD781BE32E74005E1496 /* ReviewSite.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB3FD721BE32E74005E1496 /* ReviewSite.m */; settings = {ASSET_TAGS = (); }; };
+		4CB3FD791BE32E74005E1496 /* Location.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB3FD731BE32E74005E1496 /* Location.h */; settings = {ASSET_TAGS = (); }; };
+		4CB3FD7A1BE32E74005E1496 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB3FD741BE32E74005E1496 /* Location.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +32,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0AD5A96B8BF0FFCDB61D9673 /* libPods-RPFeedback.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RPFeedback.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E11E8B220D1F4B1F12B3D6A /* Pods-RPFeedback.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPFeedback.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RPFeedback/Pods-RPFeedback.debug.xcconfig"; sourceTree = "<group>"; };
 		4CB3FD3F1BE32927005E1496 /* RPFeedback.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RPFeedback.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4CB3FD421BE32927005E1496 /* RPFeedback.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RPFeedback.h; sourceTree = "<group>"; };
 		4CB3FD441BE32927005E1496 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CB3FD491BE32927005E1496 /* RPFeedbackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RPFeedbackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CB3FD4E1BE32927005E1496 /* RPFeedbackTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RPFeedbackTests.m; sourceTree = "<group>"; };
 		4CB3FD501BE32927005E1496 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CB3FD5D1BE32C7C005E1496 /* RPFeedbackClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPFeedbackClient.h; sourceTree = "<group>"; };
+		4CB3FD5E1BE32C7C005E1496 /* RPFeedbackClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPFeedbackClient.m; sourceTree = "<group>"; };
+		4CB3FD6D1BE32DF7005E1496 /* RPFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPFeedback.h; sourceTree = "<group>"; };
+		4CB3FD6F1BE32E74005E1496 /* Feedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Feedback.h; sourceTree = "<group>"; };
+		4CB3FD701BE32E74005E1496 /* Feedback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Feedback.m; sourceTree = "<group>"; };
+		4CB3FD711BE32E74005E1496 /* ReviewSite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewSite.h; sourceTree = "<group>"; };
+		4CB3FD721BE32E74005E1496 /* ReviewSite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewSite.m; sourceTree = "<group>"; };
+		4CB3FD731BE32E74005E1496 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		4CB3FD741BE32E74005E1496 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		7639333F3BAE9F43FD815E2A /* Pods-RPFeedback.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPFeedback.release.xcconfig"; path = "Pods/Target Support Files/Pods-RPFeedback/Pods-RPFeedback.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F263A45E197BE6811966C0C /* libPods-RPFeedback.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +77,8 @@
 				4CB3FD411BE32927005E1496 /* RPFeedback */,
 				4CB3FD4D1BE32927005E1496 /* RPFeedbackTests */,
 				4CB3FD401BE32927005E1496 /* Products */,
+				681E96DC39C3910269C5AC2E /* Pods */,
+				D7657DFF0DB3FA72447B14F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,8 +94,12 @@
 		4CB3FD411BE32927005E1496 /* RPFeedback */ = {
 			isa = PBXGroup;
 			children = (
-				4CB3FD421BE32927005E1496 /* RPFeedback.h */,
+				4CB3FD5C1BE32A5E005E1496 /* 3rd Party */,
+				4CB3FD5B1BE32A58005E1496 /* Networking */,
+				4CB3FD5A1BE32A54005E1496 /* Models */,
+				4CB3FD591BE32A4C005E1496 /* View Controllers */,
 				4CB3FD441BE32927005E1496 /* Info.plist */,
+				4CB3FD6D1BE32DF7005E1496 /* RPFeedback.h */,
 			);
 			path = RPFeedback;
 			sourceTree = "<group>";
@@ -86,6 +113,59 @@
 			path = RPFeedbackTests;
 			sourceTree = "<group>";
 		};
+		4CB3FD591BE32A4C005E1496 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		4CB3FD5A1BE32A54005E1496 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4CB3FD6F1BE32E74005E1496 /* Feedback.h */,
+				4CB3FD701BE32E74005E1496 /* Feedback.m */,
+				4CB3FD711BE32E74005E1496 /* ReviewSite.h */,
+				4CB3FD721BE32E74005E1496 /* ReviewSite.m */,
+				4CB3FD731BE32E74005E1496 /* Location.h */,
+				4CB3FD741BE32E74005E1496 /* Location.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		4CB3FD5B1BE32A58005E1496 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				4CB3FD5D1BE32C7C005E1496 /* RPFeedbackClient.h */,
+				4CB3FD5E1BE32C7C005E1496 /* RPFeedbackClient.m */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		4CB3FD5C1BE32A5E005E1496 /* 3rd Party */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "3rd Party";
+			sourceTree = "<group>";
+		};
+		681E96DC39C3910269C5AC2E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2E11E8B220D1F4B1F12B3D6A /* Pods-RPFeedback.debug.xcconfig */,
+				7639333F3BAE9F43FD815E2A /* Pods-RPFeedback.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D7657DFF0DB3FA72447B14F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0AD5A96B8BF0FFCDB61D9673 /* libPods-RPFeedback.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -93,7 +173,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4CB3FD431BE32927005E1496 /* RPFeedback.h in Headers */,
+				4CB3FD5F1BE32C7C005E1496 /* RPFeedbackClient.h in Headers */,
+				4CB3FD791BE32E74005E1496 /* Location.h in Headers */,
+				4CB3FD771BE32E74005E1496 /* ReviewSite.h in Headers */,
+				4CB3FD6E1BE32DF7005E1496 /* RPFeedback.h in Headers */,
+				4CB3FD751BE32E74005E1496 /* Feedback.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,10 +188,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4CB3FD531BE32927005E1496 /* Build configuration list for PBXNativeTarget "RPFeedback" */;
 			buildPhases = (
+				6F3258C8B255A3F3ADBF40A9 /* Check Pods Manifest.lock */,
 				4CB3FD3A1BE32927005E1496 /* Sources */,
 				4CB3FD3B1BE32927005E1496 /* Frameworks */,
 				4CB3FD3C1BE32927005E1496 /* Headers */,
 				4CB3FD3D1BE32927005E1496 /* Resources */,
+				C18D9E941CBC337552F4BD03 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -188,11 +274,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6F3258C8B255A3F3ADBF40A9 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C18D9E941CBC337552F4BD03 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RPFeedback/Pods-RPFeedback-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4CB3FD3A1BE32927005E1496 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CB3FD761BE32E74005E1496 /* Feedback.m in Sources */,
+				4CB3FD601BE32C7C005E1496 /* RPFeedbackClient.m in Sources */,
+				4CB3FD7A1BE32E74005E1496 /* Location.m in Sources */,
+				4CB3FD781BE32E74005E1496 /* ReviewSite.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -305,6 +428,7 @@
 		};
 		4CB3FD541BE32927005E1496 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E11E8B220D1F4B1F12B3D6A /* Pods-RPFeedback.debug.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -321,6 +445,7 @@
 		};
 		4CB3FD551BE32927005E1496 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7639333F3BAE9F43FD815E2A /* Pods-RPFeedback.release.xcconfig */;
 			buildSettings = {
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -374,6 +499,7 @@
 				4CB3FD551BE32927005E1496 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4CB3FD561BE32927005E1496 /* Build configuration list for PBXNativeTarget "RPFeedbackTests" */ = {
 			isa = XCConfigurationList;
@@ -382,6 +508,7 @@
 				4CB3FD581BE32927005E1496 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
