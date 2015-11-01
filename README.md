@@ -22,7 +22,12 @@ RPFeedback is available on [CocoaPods](https://cocoapods.org). Add the following
 
 Please contact michaeltorcutt+rp@gmail.com for any bugs you have encountered or support you may need.
 
-##### Credits and Dependencies
+##### Credits and 3rd party dependencies
+* [AFNetworking](https://github.com/AFNetworking/AFNetworking)
+* [JSONModel](https://github.com/icanzilb/JSONModel)
+* [JSONModel](https://github.com/icanzilb/JSONModel)
+* [INTULocationManager](https://github.com/intuit/LocationManager)
+* [SZTextView](https://github.com/glaszig/SZTextView)
 
 ##### License
 AFNetworking is released under the MIT license. See LICENSE for details.
