@@ -10,7 +10,7 @@ RPFeedback is available on [CocoaPods](https://cocoapods.org). Add the following
 
 | RPFeedback Version | Minimum iOS Version  | ARC      |
 | :------------------: |:---------------------:| :--------: |
-| 1.x                | iOS 6                 | Required |
+| 1.x                | iOS 7                 | Required |
 
 ### Usage
 
