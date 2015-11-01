@@ -18,6 +18,9 @@ RPFeedback is available on [CocoaPods](https://cocoapods.org). Add the following
 
 ##### Client 
 
+##### Support
+
+Please contact michaeltorcutt+rp@gmail.com for any bugs you have encountered or support you may need.
 
 ##### Credits and Dependencies
 
