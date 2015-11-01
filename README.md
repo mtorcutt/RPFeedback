@@ -12,15 +12,84 @@ RPFeedback is available on [CocoaPods](https://cocoapods.org). Add the following
 | :------------------: |:---------------------:| :--------: |
 | 1.x                | iOS 7                 | Required |
 
+If you have not already done so, set `NSLocationAlwaysUsageDescription` and `NSLocationUsageDescription` in your app Info.plist.
+
 ### Usage
 
 #### FeedbackViewController
 
 #### Client 
 
-### Support
+##### Setup 
 
-Please contact michaeltorcutt+rp@gmail.com for any bugs you have encountered or support you may need.
+Import RPFeedback
+
+`#import '<RPFeedback/RPFeedbackClient.h>`
+
+Initialize the client with your company level API Key/Secret combination.
+
+    ReviewPushFeedbackClient *client 
+    = [ReviewPushFeedbackClient sharedClientWithKey:@"company-api-key-goes-here"      
+                                             secret:@"company-api-secret-goes-here"];
+
+#### GET Location
+
+Initialize a Location model object and set the identifier property (to the location ID you would like.) 
+
+    Location *location  = [Location new]; 
+    location.identifier = @"id-goes-here";
+
+Make request
+
+     [client GETLocation:location completion:^(BOOL success, 
+                                               Location *location, 
+                                               NSString *errorMessage) 
+      { 
+         if(success) {
+            NSLog(@"location: %@:", location");
+         } else {
+           NSLog(@"error: %@:", errorMessage");
+         }
+     }]
+
+#### GET Locations (near coordinates via CLLocation)
+
+Supply a CLLocation object. This can be initialized however you would like – by supplying coordinatess or getting it by nearnest location.  
+
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:30.2500 longitude:97.7500]; // Austin, TX :)
+
+Make request
+
+    [client GETLocationsNearLocation:location completion:^(BOOL success, NSArray *locations, NSString *errorMessage)     {
+      if(success) {
+        NSLog(@"locations: %@:", locations");
+      } else {
+        NSLog(@"error: %@:", errorMessage");
+      }
+    }];
+
+#### POST Feedback
+
+Initialize Feedback object with a rating value, feedback, and a Location object. The location object must supply an identifier.
+
+    Feedback *feedback   = [Feedback new];
+    feedback.ratingValue = 4.0; // 1.0 to 5.0 review
+    feedback.feedback    = @"This place rocks";
+    feedback.location    = location; // This must have an 'identifier' property set. 
+    
+Make the request. The completion block passes back a feedback object and in some scenarios, review site links. The links are used for sharing feedback on other sites. 
+
+    [client POSTFeedback:feedback completion:^(BOOL success,
+                                               Feedback *feedback,
+                                               NSDictionary *reviewSiteLinks,
+                                               NSString *errorMessage)
+    {
+      if(success) {
+        NSLog(@"feedback: %@", feedback);
+      } else {
+        NSLog(@"errorString: %@", errorString);
+      }
+    }];
 
 ### Credits and 3rd party dependencies
 * [AFNetworking](https://github.com/AFNetworking/AFNetworking)
