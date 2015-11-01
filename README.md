@@ -30,4 +30,4 @@ Please contact michaeltorcutt+rp@gmail.com for any bugs you have encountered or 
 * [SZTextView](https://github.com/glaszig/SZTextView)
 
 ### License
-AFNetworking is released under the MIT license. See LICENSE for details.
+RPFeedback is released under the MIT license. See LICENSE for details.
