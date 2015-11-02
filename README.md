@@ -29,8 +29,15 @@ Initialize the view controller with the following
 
 - Feedback model object (optional). If you set the location (model) with a location identifier, the locations view will be bypassed.
 
-`RPFeedbackViewController *viewController  = [[RPFeedbackViewController alloc] initWithFeedback:[Feedback new] APIKey:@"" APISecret:@""]; viewController.modalPresentationStyle = UIModalPresentationCustom; [self presentViewController:viewController animated:NO completion:nil];`
+```
+Feedback *feedback = [Feedback new]; 
 
+RPFeedbackViewController *viewController  
+= [[RPFeedbackViewController alloc] initWithFeedback:feedback APIKey:@"api-key-goes-here" APISecret:@"api-secret-goes-here"];
+viewController.modalPresentationStyle = UIModalPresentationCustom; // This is important! Please set.
+
+[self presentViewController:viewController animated:NO completion:nil];
+```
 
 #### Client 
 
