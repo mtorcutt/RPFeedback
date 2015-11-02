@@ -22,22 +22,14 @@ Initialize the view controller with the following
 
 **Required**
 
-* API Key
-* API Secret
+- API Key
+- API Secret
 
 **Optional**
 
-* Feedback model object (optional)
-  * If you set the location (model) with a location identifier, the locations view will be bypassed.
+- Feedback model object (optional). If you set the location (model) with a location identifier, the locations view will be bypassed.
 
-
-
-`RPFeedbackViewController *viewController 
-= [[RPFeedbackViewController alloc] initWithFeedback:[Feedback new] APIKey:@"" APISecret:@""];`
-    
-    viewController.modalPresentationStyle = UIModalPresentationCustom;
-    
-    [self presentViewController:viewController animated:NO completion:nil];
+`RPFeedbackViewController *viewController  = [[RPFeedbackViewController alloc] initWithFeedback:[Feedback new] APIKey:@"" APISecret:@""]; viewController.modalPresentationStyle = UIModalPresentationCustom; [self presentViewController:viewController animated:NO completion:nil];`
 
 
 #### Client 
