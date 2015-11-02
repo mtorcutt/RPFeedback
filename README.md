@@ -24,7 +24,7 @@ If you have not already done so, set `NSLocationAlwaysUsageDescription` and `NSL
 
 Import RPFeedback
 
-`#import '<RPFeedback/RPFeedbackClient.h>`
+`#import <RPFeedback/RPFeedbackClient.h>`
 
 Initialize the client with your company level API Key/Secret combination.
 
