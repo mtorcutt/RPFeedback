@@ -11,14 +11,47 @@
 @implementation MessageView
 
 
-- (id)initWithFrame:(CGRect)frame
-{
+- (id)initWithFrame:(CGRect)frame {
     if ((self = [super initWithFrame:frame])) {
         
         self.alpha                  = 1.0;
         self.userInteractionEnabled = YES;
         self.backgroundColor        = [UIColor clearColor];
         
+        self.imageView                        = [UIImageView new];
+        self.imageView.contentMode            = UIViewContentModeCenter;
+        self.imageView.userInteractionEnabled = YES;
+        
+        [self addSubview:self.imageView];
+
+        self.textLabel               = [UILabel new];
+        self.textLabel.font          = [UIFont systemFontOfSize:18.0];
+        self.textLabel.numberOfLines = 3;
+        self.textLabel.textColor     = [UIColor whiteColor];
+        self.textLabel.textAlignment = NSTextAlignmentCenter;
+        
+        [self addSubview:self.textLabel];
+
+        self.detailTextLabel               = [UILabel new];
+        self.detailTextLabel.font          = [UIFont systemFontOfSize:15.0];
+        self.detailTextLabel.numberOfLines = 0;
+        self.detailTextLabel.textAlignment = NSTextAlignmentCenter;
+        self.detailTextLabel.textColor = [UIColor colorWithWhite:1.0 alpha:.75];
+        
+        [self addSubview:self.detailTextLabel];
+        
+        self.refreshButton = [UIButton buttonWithType:UIButtonTypeSystem];
+        
+        [self.refreshButton setBackgroundColor:[UIColor redColor]];
+        [self.refreshButton.titleLabel setFont:[UIFont systemFontOfSize:15.0]];
+        [self.refreshButton setContentEdgeInsets:UIEdgeInsetsMake(12.0, 12.0, 12.0, 12.0)];
+        [self.refreshButton setTintColor:[UIColor whiteColor]];
+        [self.refreshButton addTarget:self
+                               action:@selector(handleButtonTapped:)
+                     forControlEvents:UIControlEventTouchUpInside];
+        
+        [self addSubview:self.refreshButton];
+
     }
     return self;
 }
@@ -120,87 +153,6 @@
     self.textLabel.frame       = textLabelFrame;
     self.detailTextLabel.frame = detailTextLabelFrame;
     self.refreshButton.frame   = buttonFrame;
-}
-
-#pragma mark - Helpers
-
-- (void)setSubviewProperties:(MessageViewSubviewProperty)subviewProperties
-{
-    if(_subviewProperties == subviewProperties) {
-        return;
-    }
-    
-   // _subviewProperties = subviewProperties;
-
-    if(((subviewProperties & MessageViewSubviewPropertyImageView) == MessageViewSubviewPropertyImageView) && self.imageView == nil) {
-        
-        self.imageView                        = [UIImageView new];
-        self.imageView.contentMode            = UIViewContentModeCenter;
-        self.imageView.userInteractionEnabled = YES;
-        
-        [self addSubview:self.imageView];
-        
-    } else if(((subviewProperties & MessageViewSubviewPropertyImageView) != MessageViewSubviewPropertyImageView) && self.imageView) {
-        
-        [self.imageView removeFromSuperview];
-        self.imageView = nil;
-        
-    }
-        
-    if(((subviewProperties & MessageViewSubviewPropertyTextLabel) == MessageViewSubviewPropertyTextLabel) && self.textLabel == nil) {
-        
-        self.textLabel      = [UILabel new];
-        self.textLabel.font = [UIFont systemFontOfSize:18.0];
-        self.textLabel.numberOfLines = 3;
-        self.textLabel.textColor = [UIColor whiteColor];
-        self.textLabel.textAlignment = NSTextAlignmentCenter;
-        
-        [self addSubview:self.textLabel];
-        
-    } else if(((subviewProperties & MessageViewSubviewPropertyTextLabel) != MessageViewSubviewPropertyTextLabel) && self.textLabel) {
-        
-        [self.textLabel removeFromSuperview];
-        self.textLabel = nil;
-        
-    }
-    
-    if(((subviewProperties & MessageViewSubviewPropertyDetailTextLabel) == MessageViewSubviewPropertyDetailTextLabel) && self.detailTextLabel == nil) {
-        
-        self.detailTextLabel               = [UILabel new];
-        self.detailTextLabel.font          = [UIFont systemFontOfSize:15.0];
-        self.detailTextLabel.numberOfLines = 0;
-        self.detailTextLabel.textAlignment = NSTextAlignmentCenter;
-        self.detailTextLabel.textColor = [UIColor colorWithWhite:1.0 alpha:.75];
-
-        [self addSubview:self.detailTextLabel];
-        
-    } else if(((subviewProperties & MessageViewSubviewPropertyDetailTextLabel) != MessageViewSubviewPropertyDetailTextLabel) && self.detailTextLabel) {
-        
-        [self.detailTextLabel removeFromSuperview];
-        self.detailTextLabel = nil;
-        
-    }
-    
-    if(((subviewProperties & MessageViewSubviewPropertyButton) == MessageViewSubviewPropertyButton) && self.refreshButton == nil) {
-        
-//        self.refreshButton = [UIButton buttonWithType:UIButtonTypeSystem];
-//        
-//        [self.refreshButton setBackgroundColor:[UIColor grayColorLight:YES]];
-//        [self.refreshButton.titleLabel setFont:[UIFont lightFontWithSize:16.0]];
-//        [self.refreshButton setContentEdgeInsets:UIEdgeInsetsMake(12.0, 12.0, 12.0, 12.0)];
-//        [self.refreshButton setTintColor:[UIColor whiteColor]];
-//        [self.refreshButton addTarget:self
-//                        action:@selector(handleButtonTapped:)
-//              forControlEvents:UIControlEventTouchUpInside];
-//        
-//        [self addSubview:self.refreshButton];
-        
-    } else if(((subviewProperties & MessageViewSubviewPropertyButton) != MessageViewSubviewPropertyButton) && self.refreshButton) {
-        
-        [self.refreshButton removeFromSuperview];
-        self.refreshButton = nil;
-        
-    }
 }
 
 #pragma mark - Button methods

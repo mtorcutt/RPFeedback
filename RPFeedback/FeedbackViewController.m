@@ -419,12 +419,12 @@ CGFloat const StatusBarHeight = 15.0;
                 
             } else {
                 
-//                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:alertTitle
-//                                                                    message:message
-//                                                                   delegate:nil
-//                                                          cancelButtonTitle:cancelButtonText
-//                                                          otherButtonTitles:nil];
-//                [alertView show];
+                UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:alertTitle
+                                                                    message:message
+                                                                   delegate:nil
+                                                          cancelButtonTitle:cancelButtonText
+                                                          otherButtonTitles:nil];
+                [alertView show];
 
             }
             

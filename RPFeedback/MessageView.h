@@ -10,19 +10,6 @@
 
 typedef void (^ButtonTapBlock)(void);
 
-typedef NS_OPTIONS(NSInteger, MessageViewSubviewProperty) {
-    MessageViewSubviewPropertyNone            = 0,
-    MessageViewSubviewPropertyImageView       = 1 << 0,
-    MessageViewSubviewPropertyTextLabel       = 1 << 1,
-    MessageViewSubviewPropertyDetailTextLabel = 1 << 2,
-    MessageViewSubviewPropertyButton          = 1 << 3,
-};
-
-typedef NS_ENUM(NSInteger, MessageViewStyle) {
-    MessageViewStyleDefault      = 0,
-    MessageViewStyleLightContent = 1
-};
-
 @interface MessageView : UIView
 
 ///------------------------------------------------
@@ -33,17 +20,6 @@ typedef NS_ENUM(NSInteger, MessageViewStyle) {
  * offset
  */
 @property (nonatomic, assign) CGFloat verticalOffset;
-
-/**
- * layout determines what views are initialized
- * for this view.
- */
-@property (nonatomic, assign) MessageViewSubviewProperty subviewProperties;
-
-/**
- * style determines the colors of the subviews
- */
-@property (nonatomic, assign) MessageViewStyle style;
 
 ///------------------------------------------------
 /// @name Subviews
