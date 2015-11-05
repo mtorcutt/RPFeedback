@@ -111,7 +111,7 @@ NSString * const PositiveReinforcementViewControllerTableViewCellIdentifier = @"
     
     CGSize tableViewSize = self.tableView.contentSize;
     
-    CGFloat navigationBarHeight = 64.0;
+//    CGFloat navigationBarHeight = 64.0;
     
     CGRect titleViewFrame     = CGRectZero;
     titleViewFrame.size
