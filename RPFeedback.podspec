@@ -2,13 +2,13 @@ Pod::Spec.new do |s|
 
 # 1
 s.platform = :ios
-s.ios.deployment_target = '8.0'
+s.ios.deployment_target = '7.0'
 s.name = "RPFeedback"
 s.summary = "RPFeedback lets ReviewPush companies submit feedback at a company level."
 s.requires_arc = true
 
 # 2
-s.version = "0.1.03"
+s.version = "0.1.04"
 
 # 3
 s.license = "MIT"
