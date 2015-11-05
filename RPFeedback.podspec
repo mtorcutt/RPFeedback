@@ -8,7 +8,7 @@ s.summary = "RPFeedback lets ReviewPush companies submit feedback at a company l
 s.requires_arc = true
 
 # 2
-s.version = "0.1.04"
+s.version = "0.1.05"
 
 # 3
 s.license = "MIT"

@@ -111,58 +111,58 @@
                        buttonTitle:(NSString *)buttonTitle
                       buttonTapped:(void(^)(void))buttonTappedBlock
 {
-    if(self.messageView == nil) {
-        self.messageView = [MessageView new];
-        
-        if(animated) {
-            self.messageView.alpha = 0.0;
-        }
-        
-        [self layoutMessageView];
-        
-        [self.view addSubview:self.messageView];
-        [self.view bringSubviewToFront:self.messageView];
-    }
-    
-    MessageViewSubviewProperty subviews;
-    
-    if(image) {
-        subviews |= MessageViewSubviewPropertyImageView;
-    }
-    
-    if(title) {
-        subviews |= MessageViewSubviewPropertyTextLabel;
-    }
-    
-    if(detailText) {
-        subviews |= MessageViewSubviewPropertyDetailTextLabel;
-    }
-    
-    if(buttonTitle) {
-        subviews |= MessageViewSubviewPropertyButton;
-    }
-    
-    [self.messageView             setSubviewProperties:subviews];
-    [self.messageView.imageView      setImage:image];
-    [self.messageView.textLabel       setText:title];
-    [self.messageView.detailTextLabel setText:detailText];
-    [self.messageView.refreshButton setTitle:buttonTitle
-                                    forState:UIControlStateNormal];
-    
-    [self layoutMessageView];
-    [self.messageView layoutSubviews];
-    
-    self.messageView.buttonTapBlock = ^{
-        if(buttonTappedBlock) {
-            buttonTappedBlock();
-        }
-    };
-    
-    if(animated) {
-        [UIView animateWithDuration:.35 animations:^{
-            self.messageView.alpha = 1.0;
-        }];
-    }
+//    if(self.messageView == nil) {
+//        self.messageView = [MessageView new];
+//        
+//        if(animated) {
+//            self.messageView.alpha = 0.0;
+//        }
+//        
+//        [self layoutMessageView];
+//        
+//        [self.view addSubview:self.messageView];
+//        [self.view bringSubviewToFront:self.messageView];
+//    }
+//    
+//    MessageViewSubviewProperty subviews;
+//    
+//    if(image) {
+//        subviews |= MessageViewSubviewPropertyImageView;
+//    }
+//    
+//    if(title) {
+//        subviews |= MessageViewSubviewPropertyTextLabel;
+//    }
+//    
+//    if(detailText) {
+//        subviews |= MessageViewSubviewPropertyDetailTextLabel;
+//    }
+//    
+//    if(buttonTitle) {
+//        subviews |= MessageViewSubviewPropertyButton;
+//    }
+//    
+//    [self.messageView             setSubviewProperties:subviews];
+//    [self.messageView.imageView      setImage:image];
+//    [self.messageView.textLabel       setText:title];
+//    [self.messageView.detailTextLabel setText:detailText];
+//    [self.messageView.refreshButton setTitle:buttonTitle
+//                                    forState:UIControlStateNormal];
+//    
+//    [self layoutMessageView];
+//    [self.messageView layoutSubviews];
+//    
+//    self.messageView.buttonTapBlock = ^{
+//        if(buttonTappedBlock) {
+//            buttonTappedBlock();
+//        }
+//    };
+//    
+//    if(animated) {
+//        [UIView animateWithDuration:.35 animations:^{
+//            self.messageView.alpha = 1.0;
+//        }];
+//    }
 }
 
 - (void)removeMessageViewAnimated:(BOOL)animated
