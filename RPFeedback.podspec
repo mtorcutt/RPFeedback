@@ -8,7 +8,7 @@ s.summary = "RPFeedback lets ReviewPush companies submit feedback at a company l
 s.requires_arc = true
 
 # 2
-s.version = "0.1.01"
+s.version = "0.1.02"
 
 # 3
 s.license = "MIT"
@@ -23,12 +23,8 @@ s.author = { "Michael Orcutt" => "michaeltorcutt@gmail.com" }
 # 5 - Replace this URL with your own Github page's URL (from the address bar)
 s.homepage = "http://reviewpush.com"
 
-# For example,
-# s.homepage = "https://github.com/JRG-Developer/RPFeedback"
-
-
 # 6 - Replace this URL with your own Git URL from "Quick Setup"
-s.source = { :git => "https://github.com/mtorcutt/RPFeedback.git", :tag => "#{s.version}"}
+s.source = { :git => "https://github.com/mtorcutt/RPFeedback.git", :tag => s.version }
 
 # 7
 s.framework = "UIKit"

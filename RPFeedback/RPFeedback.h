@@ -15,3 +15,4 @@ FOUNDATION_EXPORT double ReviewPushFeedbackVersionNumber;
 FOUNDATION_EXPORT const unsigned char ReviewPushFeedbackVersionString[];
 
 #import <ReviewPushFeedback/RPFeedbackClient.h>
+#import <ReviewPushFeedback/RPFeedbackViewController.h>
