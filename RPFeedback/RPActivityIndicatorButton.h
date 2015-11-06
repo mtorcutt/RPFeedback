@@ -8,10 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ActivityIndicatorButton : UIButton
+@interface RPActivityIndicatorButton : UIButton
 
 @property (nonatomic, strong) UIActivityIndicatorView *activityIndicatorView;
-
 @property (nonatomic, assign, getter=isActivityIndicatorViewShowing) BOOL activityIndicatorViewShowing;
 
 @end

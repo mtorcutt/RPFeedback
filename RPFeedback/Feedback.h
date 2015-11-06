@@ -8,7 +8,7 @@
 
 #import "JSONModel.h"
 
-#import "Location.h"
+#import "RPLocation.h"
 
 @interface Feedback : JSONModel
 
@@ -16,6 +16,6 @@
 @property (nonatomic, strong) NSString *emailAddress;
 @property (nonatomic, strong) NSString *feedback;
 @property (nonatomic, assign) NSInteger ratingValue;
-@property (nonatomic, strong) Location *location;
+@property (nonatomic, strong) RPLocation *location;
 
 @end

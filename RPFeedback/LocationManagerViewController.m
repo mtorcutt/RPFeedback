@@ -133,7 +133,7 @@ NSString * const LocationManagerViewControllerTableViewCellIdentifier = @"Locati
     
     [[RPFeedbackClient sharedClientWithKey:self.APIKey
                                     secret:self.APISecret]
-     GETLocation:self.feedback.location completion:^(BOOL success, Location *location, NSString *errorMessage) {
+     GETLocation:self.feedback.location completion:^(BOOL success, RPLocation *location, NSString *errorMessage) {
 
          if(success) {
              
@@ -227,7 +227,7 @@ NSString * const LocationManagerViewControllerTableViewCellIdentifier = @"Locati
                      
                  } else {
                      
-                     Location *location = [self.locations firstObject];
+                     RPLocation *location = [self.locations firstObject];
                      
                      self.titleView.textLabel.text       = location.name;
                      self.titleView.detailTextLabel.text = @"Please select your location.";
@@ -278,7 +278,7 @@ NSString * const LocationManagerViewControllerTableViewCellIdentifier = @"Locati
     TransparentTableViewCell *cell
     = [tableView dequeueReusableCellWithIdentifier:LocationManagerViewControllerTableViewCellIdentifier];
     
-    Location *location = self.locations[indexPath.row];
+    RPLocation *location = self.locations[indexPath.row];
     
     cell.textLabel.attributedText = location.addressAtrributedString;
     
@@ -287,7 +287,7 @@ NSString * const LocationManagerViewControllerTableViewCellIdentifier = @"Locati
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    Location *location = self.locations[indexPath.row];
+    RPLocation *location = self.locations[indexPath.row];
     
     CGSize maxSize = CGSizeMake(self.view.bounds.size.width - 30.0, CGFLOAT_MAX);
     

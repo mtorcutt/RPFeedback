@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Feedback.h"
+#import "RPFeedback.h"
 
 @interface RPFeedbackViewController : UINavigationController
 
-- (id)initWithFeedback:(Feedback *)feedback
+- (id)initWithFeedback:(RPFeedback *)feedback
                 APIKey:(NSString *)APIKey
              APISecret:(NSString *)APISecret;
 

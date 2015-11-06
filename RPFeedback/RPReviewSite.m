@@ -6,8 +6,8 @@
 //  Copyright © 2015 Review Push. All rights reserved.
 //
 
-#import "ReviewSite.h"
+#import "RPReviewSite.h"
 
-@implementation ReviewSite
+@implementation RPReviewSite
 
 @end

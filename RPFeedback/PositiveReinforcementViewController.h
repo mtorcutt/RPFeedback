@@ -6,9 +6,9 @@
 //  Copyright © 2015 Review Push. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "RPBaseViewController.h"
 
-@interface PositiveReinforcementViewController : BaseViewController
+@interface PositiveReinforcementViewController : RPBaseViewController
 
 @property (nonatomic, strong) NSDictionary *reviewSites;
 

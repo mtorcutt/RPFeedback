@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BaseViewController : UIViewController
+@interface RPBaseViewController : UIViewController
 
 - (void)displayActivityIndicatorViewAnimated:(BOOL)animated;
 - (void)removeActivityIndicatorViewAnimated:(BOOL)animated;

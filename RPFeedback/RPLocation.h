@@ -8,7 +8,7 @@
 
 #import "JSONModel.h"
 
-@interface Location : JSONModel
+@interface RPLocation : JSONModel
 
 @property (nonatomic, strong) NSString *identifier;
 @property (nonatomic, strong) NSString *name;

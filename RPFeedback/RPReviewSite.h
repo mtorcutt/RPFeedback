@@ -8,7 +8,7 @@
 
 #import "JSONModel.h"
 
-@interface ReviewSite : JSONModel
+@interface RPReviewSite : JSONModel
 
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *link;

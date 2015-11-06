@@ -65,7 +65,7 @@
 
 #pragma mark - Initialization
 
-- (id)initWithFeedback:(Feedback *)feedback
+- (id)initWithFeedback:(RPFeedback *)feedback
                 APIKey:(NSString *)APIKey
              APISecret:(NSString *)APISecret {
     

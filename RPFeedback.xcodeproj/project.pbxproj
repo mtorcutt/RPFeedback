@@ -8,41 +8,41 @@
 
 /* Begin PBXBuildFile section */
 		3F263A45E197BE6811966C0C /* libPods-RPFeedback.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AD5A96B8BF0FFCDB61D9673 /* libPods-RPFeedback.a */; };
-		4C8709B81BE71C49009F9261 /* MessageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8709AE1BE71C49009F9261 /* MessageView.h */; settings = {ASSET_TAGS = (); }; };
-		4C8709B91BE71C49009F9261 /* MessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8709AF1BE71C49009F9261 /* MessageView.m */; settings = {ASSET_TAGS = (); }; };
-		4C8709BA1BE71C49009F9261 /* MultipleLineTitle.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8709B01BE71C49009F9261 /* MultipleLineTitle.h */; settings = {ASSET_TAGS = (); }; };
-		4C8709BB1BE71C49009F9261 /* MultipleLineTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8709B11BE71C49009F9261 /* MultipleLineTitle.m */; settings = {ASSET_TAGS = (); }; };
-		4C8709BC1BE71C49009F9261 /* InsetTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8709B21BE71C49009F9261 /* InsetTextField.h */; settings = {ASSET_TAGS = (); }; };
-		4C8709BD1BE71C49009F9261 /* InsetTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8709B31BE71C49009F9261 /* InsetTextField.m */; settings = {ASSET_TAGS = (); }; };
-		4C8709BE1BE71C49009F9261 /* ActivityIndicatorButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8709B41BE71C49009F9261 /* ActivityIndicatorButton.h */; settings = {ASSET_TAGS = (); }; };
-		4C8709BF1BE71C49009F9261 /* ActivityIndicatorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8709B51BE71C49009F9261 /* ActivityIndicatorButton.m */; settings = {ASSET_TAGS = (); }; };
-		4C8709C01BE71C49009F9261 /* TransparentTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8709B61BE71C49009F9261 /* TransparentTableViewCell.h */; settings = {ASSET_TAGS = (); }; };
-		4C8709C11BE71C49009F9261 /* TransparentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8709B71BE71C49009F9261 /* TransparentTableViewCell.m */; settings = {ASSET_TAGS = (); }; };
-		4C8709C51BE71C66009F9261 /* PushTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8709C31BE71C66009F9261 /* PushTransition.h */; settings = {ASSET_TAGS = (); }; };
-		4C8709C61BE71C66009F9261 /* PushTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8709C41BE71C66009F9261 /* PushTransition.m */; settings = {ASSET_TAGS = (); }; };
-		4C8709D61BE71C8C009F9261 /* BaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8709CC1BE71C8C009F9261 /* BaseViewController.h */; settings = {ASSET_TAGS = (); }; };
-		4C8709D71BE71C8C009F9261 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8709CD1BE71C8C009F9261 /* BaseViewController.m */; settings = {ASSET_TAGS = (); }; };
-		4C8709D81BE71C8C009F9261 /* LocationManagerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8709CE1BE71C8C009F9261 /* LocationManagerViewController.h */; settings = {ASSET_TAGS = (); }; };
-		4C8709D91BE71C8C009F9261 /* LocationManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8709CF1BE71C8C009F9261 /* LocationManagerViewController.m */; settings = {ASSET_TAGS = (); }; };
-		4C8709DA1BE71C8C009F9261 /* RPFeedbackViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8709D01BE71C8C009F9261 /* RPFeedbackViewController.h */; settings = {ASSET_TAGS = (); }; };
-		4C8709DB1BE71C8C009F9261 /* RPFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8709D11BE71C8C009F9261 /* RPFeedbackViewController.m */; settings = {ASSET_TAGS = (); }; };
-		4C8709DC1BE71C8C009F9261 /* FeedbackViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8709D21BE71C8C009F9261 /* FeedbackViewController.h */; settings = {ASSET_TAGS = (); }; };
-		4C8709DD1BE71C8C009F9261 /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8709D31BE71C8C009F9261 /* FeedbackViewController.m */; settings = {ASSET_TAGS = (); }; };
-		4C8709DE1BE71C8C009F9261 /* PositiveReinforcementViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8709D41BE71C8C009F9261 /* PositiveReinforcementViewController.h */; settings = {ASSET_TAGS = (); }; };
-		4C8709DF1BE71C8C009F9261 /* PositiveReinforcementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8709D51BE71C8C009F9261 /* PositiveReinforcementViewController.m */; settings = {ASSET_TAGS = (); }; };
-		4C8709E21BE71D08009F9261 /* TPFloatRatingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8709E01BE71D08009F9261 /* TPFloatRatingView.h */; settings = {ASSET_TAGS = (); }; };
-		4C8709E31BE71D08009F9261 /* TPFloatRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8709E11BE71D08009F9261 /* TPFloatRatingView.m */; settings = {ASSET_TAGS = (); }; };
-		4CB3FD4A1BE32927005E1496 /* RPFeedback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB3FD3F1BE32927005E1496 /* RPFeedback.framework */; settings = {ASSET_TAGS = (); }; };
+		4C8709B81BE71C49009F9261 /* MessageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8709AE1BE71C49009F9261 /* MessageView.h */; };
+		4C8709B91BE71C49009F9261 /* MessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8709AF1BE71C49009F9261 /* MessageView.m */; };
+		4C8709BA1BE71C49009F9261 /* MultipleLineTitle.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8709B01BE71C49009F9261 /* MultipleLineTitle.h */; };
+		4C8709BB1BE71C49009F9261 /* MultipleLineTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8709B11BE71C49009F9261 /* MultipleLineTitle.m */; };
+		4C8709BC1BE71C49009F9261 /* InsetTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8709B21BE71C49009F9261 /* InsetTextField.h */; };
+		4C8709BD1BE71C49009F9261 /* InsetTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8709B31BE71C49009F9261 /* InsetTextField.m */; };
+		4C8709BE1BE71C49009F9261 /* RPActivityIndicatorButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8709B41BE71C49009F9261 /* RPActivityIndicatorButton.h */; };
+		4C8709BF1BE71C49009F9261 /* RPActivityIndicatorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8709B51BE71C49009F9261 /* RPActivityIndicatorButton.m */; };
+		4C8709C01BE71C49009F9261 /* TransparentTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8709B61BE71C49009F9261 /* TransparentTableViewCell.h */; };
+		4C8709C11BE71C49009F9261 /* TransparentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8709B71BE71C49009F9261 /* TransparentTableViewCell.m */; };
+		4C8709C51BE71C66009F9261 /* PushTransition.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8709C31BE71C66009F9261 /* PushTransition.h */; };
+		4C8709C61BE71C66009F9261 /* PushTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8709C41BE71C66009F9261 /* PushTransition.m */; };
+		4C8709D61BE71C8C009F9261 /* RPBaseViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8709CC1BE71C8C009F9261 /* RPBaseViewController.h */; };
+		4C8709D71BE71C8C009F9261 /* RPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8709CD1BE71C8C009F9261 /* RPBaseViewController.m */; };
+		4C8709D81BE71C8C009F9261 /* LocationManagerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8709CE1BE71C8C009F9261 /* LocationManagerViewController.h */; };
+		4C8709D91BE71C8C009F9261 /* LocationManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8709CF1BE71C8C009F9261 /* LocationManagerViewController.m */; };
+		4C8709DA1BE71C8C009F9261 /* RPFeedbackViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8709D01BE71C8C009F9261 /* RPFeedbackViewController.h */; };
+		4C8709DB1BE71C8C009F9261 /* RPFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8709D11BE71C8C009F9261 /* RPFeedbackViewController.m */; };
+		4C8709DC1BE71C8C009F9261 /* FeedbackViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8709D21BE71C8C009F9261 /* FeedbackViewController.h */; };
+		4C8709DD1BE71C8C009F9261 /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8709D31BE71C8C009F9261 /* FeedbackViewController.m */; };
+		4C8709DE1BE71C8C009F9261 /* PositiveReinforcementViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8709D41BE71C8C009F9261 /* PositiveReinforcementViewController.h */; };
+		4C8709DF1BE71C8C009F9261 /* PositiveReinforcementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8709D51BE71C8C009F9261 /* PositiveReinforcementViewController.m */; };
+		4C8709E21BE71D08009F9261 /* TPFloatRatingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C8709E01BE71D08009F9261 /* TPFloatRatingView.h */; };
+		4C8709E31BE71D08009F9261 /* TPFloatRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C8709E11BE71D08009F9261 /* TPFloatRatingView.m */; };
+		4CB3FD4A1BE32927005E1496 /* RPFeedback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CB3FD3F1BE32927005E1496 /* RPFeedback.framework */; };
 		4CB3FD4F1BE32927005E1496 /* RPFeedbackTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB3FD4E1BE32927005E1496 /* RPFeedbackTests.m */; };
-		4CB3FD5F1BE32C7C005E1496 /* RPFeedbackClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB3FD5D1BE32C7C005E1496 /* RPFeedbackClient.h */; settings = {ASSET_TAGS = (); }; };
-		4CB3FD601BE32C7C005E1496 /* RPFeedbackClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB3FD5E1BE32C7C005E1496 /* RPFeedbackClient.m */; settings = {ASSET_TAGS = (); }; };
-		4CB3FD6E1BE32DF7005E1496 /* RPFeedback.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB3FD6D1BE32DF7005E1496 /* RPFeedback.h */; settings = {ASSET_TAGS = (); }; };
-		4CB3FD751BE32E74005E1496 /* Feedback.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB3FD6F1BE32E74005E1496 /* Feedback.h */; settings = {ASSET_TAGS = (); }; };
-		4CB3FD761BE32E74005E1496 /* Feedback.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB3FD701BE32E74005E1496 /* Feedback.m */; settings = {ASSET_TAGS = (); }; };
-		4CB3FD771BE32E74005E1496 /* ReviewSite.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB3FD711BE32E74005E1496 /* ReviewSite.h */; settings = {ASSET_TAGS = (); }; };
-		4CB3FD781BE32E74005E1496 /* ReviewSite.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB3FD721BE32E74005E1496 /* ReviewSite.m */; settings = {ASSET_TAGS = (); }; };
-		4CB3FD791BE32E74005E1496 /* Location.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB3FD731BE32E74005E1496 /* Location.h */; settings = {ASSET_TAGS = (); }; };
-		4CB3FD7A1BE32E74005E1496 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB3FD741BE32E74005E1496 /* Location.m */; settings = {ASSET_TAGS = (); }; };
+		4CB3FD5F1BE32C7C005E1496 /* RPFeedbackClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB3FD5D1BE32C7C005E1496 /* RPFeedbackClient.h */; };
+		4CB3FD601BE32C7C005E1496 /* RPFeedbackClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB3FD5E1BE32C7C005E1496 /* RPFeedbackClient.m */; };
+		4CB3FD6E1BE32DF7005E1496 /* RPFeedback.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB3FD6D1BE32DF7005E1496 /* RPFeedback.h */; };
+		4CB3FD751BE32E74005E1496 /* Feedback.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB3FD6F1BE32E74005E1496 /* Feedback.h */; };
+		4CB3FD761BE32E74005E1496 /* Feedback.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB3FD701BE32E74005E1496 /* Feedback.m */; };
+		4CB3FD771BE32E74005E1496 /* RPReviewSite.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB3FD711BE32E74005E1496 /* RPReviewSite.h */; };
+		4CB3FD781BE32E74005E1496 /* RPReviewSite.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB3FD721BE32E74005E1496 /* RPReviewSite.m */; };
+		4CB3FD791BE32E74005E1496 /* RPLocation.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB3FD731BE32E74005E1496 /* RPLocation.h */; };
+		4CB3FD7A1BE32E74005E1496 /* RPLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CB3FD741BE32E74005E1496 /* RPLocation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,14 +64,14 @@
 		4C8709B11BE71C49009F9261 /* MultipleLineTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultipleLineTitle.m; sourceTree = "<group>"; };
 		4C8709B21BE71C49009F9261 /* InsetTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsetTextField.h; sourceTree = "<group>"; };
 		4C8709B31BE71C49009F9261 /* InsetTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InsetTextField.m; sourceTree = "<group>"; };
-		4C8709B41BE71C49009F9261 /* ActivityIndicatorButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityIndicatorButton.h; sourceTree = "<group>"; };
-		4C8709B51BE71C49009F9261 /* ActivityIndicatorButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityIndicatorButton.m; sourceTree = "<group>"; };
+		4C8709B41BE71C49009F9261 /* RPActivityIndicatorButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPActivityIndicatorButton.h; sourceTree = "<group>"; };
+		4C8709B51BE71C49009F9261 /* RPActivityIndicatorButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPActivityIndicatorButton.m; sourceTree = "<group>"; };
 		4C8709B61BE71C49009F9261 /* TransparentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransparentTableViewCell.h; sourceTree = "<group>"; };
 		4C8709B71BE71C49009F9261 /* TransparentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransparentTableViewCell.m; sourceTree = "<group>"; };
 		4C8709C31BE71C66009F9261 /* PushTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PushTransition.h; sourceTree = "<group>"; };
 		4C8709C41BE71C66009F9261 /* PushTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PushTransition.m; sourceTree = "<group>"; };
-		4C8709CC1BE71C8C009F9261 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
-		4C8709CD1BE71C8C009F9261 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		4C8709CC1BE71C8C009F9261 /* RPBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPBaseViewController.h; sourceTree = "<group>"; };
+		4C8709CD1BE71C8C009F9261 /* RPBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPBaseViewController.m; sourceTree = "<group>"; };
 		4C8709CE1BE71C8C009F9261 /* LocationManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationManagerViewController.h; sourceTree = "<group>"; };
 		4C8709CF1BE71C8C009F9261 /* LocationManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationManagerViewController.m; sourceTree = "<group>"; };
 		4C8709D01BE71C8C009F9261 /* RPFeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPFeedbackViewController.h; sourceTree = "<group>"; };
@@ -92,10 +92,10 @@
 		4CB3FD6D1BE32DF7005E1496 /* RPFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPFeedback.h; sourceTree = "<group>"; };
 		4CB3FD6F1BE32E74005E1496 /* Feedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Feedback.h; sourceTree = "<group>"; };
 		4CB3FD701BE32E74005E1496 /* Feedback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Feedback.m; sourceTree = "<group>"; };
-		4CB3FD711BE32E74005E1496 /* ReviewSite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewSite.h; sourceTree = "<group>"; };
-		4CB3FD721BE32E74005E1496 /* ReviewSite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewSite.m; sourceTree = "<group>"; };
-		4CB3FD731BE32E74005E1496 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
-		4CB3FD741BE32E74005E1496 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		4CB3FD711BE32E74005E1496 /* RPReviewSite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPReviewSite.h; sourceTree = "<group>"; };
+		4CB3FD721BE32E74005E1496 /* RPReviewSite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPReviewSite.m; sourceTree = "<group>"; };
+		4CB3FD731BE32E74005E1496 /* RPLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPLocation.h; sourceTree = "<group>"; };
+		4CB3FD741BE32E74005E1496 /* RPLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPLocation.m; sourceTree = "<group>"; };
 		7639333F3BAE9F43FD815E2A /* Pods-RPFeedback.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPFeedback.release.xcconfig"; path = "Pods/Target Support Files/Pods-RPFeedback/Pods-RPFeedback.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -128,8 +128,8 @@
 				4C8709B11BE71C49009F9261 /* MultipleLineTitle.m */,
 				4C8709B21BE71C49009F9261 /* InsetTextField.h */,
 				4C8709B31BE71C49009F9261 /* InsetTextField.m */,
-				4C8709B41BE71C49009F9261 /* ActivityIndicatorButton.h */,
-				4C8709B51BE71C49009F9261 /* ActivityIndicatorButton.m */,
+				4C8709B41BE71C49009F9261 /* RPActivityIndicatorButton.h */,
+				4C8709B51BE71C49009F9261 /* RPActivityIndicatorButton.m */,
 				4C8709B61BE71C49009F9261 /* TransparentTableViewCell.h */,
 				4C8709B71BE71C49009F9261 /* TransparentTableViewCell.m */,
 			);
@@ -192,8 +192,8 @@
 		4CB3FD591BE32A4C005E1496 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4C8709CC1BE71C8C009F9261 /* BaseViewController.h */,
-				4C8709CD1BE71C8C009F9261 /* BaseViewController.m */,
+				4C8709CC1BE71C8C009F9261 /* RPBaseViewController.h */,
+				4C8709CD1BE71C8C009F9261 /* RPBaseViewController.m */,
 				4C8709CE1BE71C8C009F9261 /* LocationManagerViewController.h */,
 				4C8709CF1BE71C8C009F9261 /* LocationManagerViewController.m */,
 				4C8709D01BE71C8C009F9261 /* RPFeedbackViewController.h */,
@@ -211,10 +211,10 @@
 			children = (
 				4CB3FD6F1BE32E74005E1496 /* Feedback.h */,
 				4CB3FD701BE32E74005E1496 /* Feedback.m */,
-				4CB3FD711BE32E74005E1496 /* ReviewSite.h */,
-				4CB3FD721BE32E74005E1496 /* ReviewSite.m */,
-				4CB3FD731BE32E74005E1496 /* Location.h */,
-				4CB3FD741BE32E74005E1496 /* Location.m */,
+				4CB3FD711BE32E74005E1496 /* RPReviewSite.h */,
+				4CB3FD721BE32E74005E1496 /* RPReviewSite.m */,
+				4CB3FD731BE32E74005E1496 /* RPLocation.h */,
+				4CB3FD741BE32E74005E1496 /* RPLocation.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -266,17 +266,17 @@
 				4C8709DA1BE71C8C009F9261 /* RPFeedbackViewController.h in Headers */,
 				4C8709DC1BE71C8C009F9261 /* FeedbackViewController.h in Headers */,
 				4C8709C01BE71C49009F9261 /* TransparentTableViewCell.h in Headers */,
-				4C8709BE1BE71C49009F9261 /* ActivityIndicatorButton.h in Headers */,
-				4CB3FD791BE32E74005E1496 /* Location.h in Headers */,
+				4C8709BE1BE71C49009F9261 /* RPActivityIndicatorButton.h in Headers */,
+				4CB3FD791BE32E74005E1496 /* RPLocation.h in Headers */,
 				4C8709BC1BE71C49009F9261 /* InsetTextField.h in Headers */,
 				4C8709DE1BE71C8C009F9261 /* PositiveReinforcementViewController.h in Headers */,
-				4CB3FD771BE32E74005E1496 /* ReviewSite.h in Headers */,
+				4CB3FD771BE32E74005E1496 /* RPReviewSite.h in Headers */,
 				4C8709B81BE71C49009F9261 /* MessageView.h in Headers */,
 				4CB3FD6E1BE32DF7005E1496 /* RPFeedback.h in Headers */,
 				4C8709C51BE71C66009F9261 /* PushTransition.h in Headers */,
 				4C8709D81BE71C8C009F9261 /* LocationManagerViewController.h in Headers */,
 				4C8709BA1BE71C49009F9261 /* MultipleLineTitle.h in Headers */,
-				4C8709D61BE71C8C009F9261 /* BaseViewController.h in Headers */,
+				4C8709D61BE71C8C009F9261 /* RPBaseViewController.h in Headers */,
 				4CB3FD751BE32E74005E1496 /* Feedback.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,18 +416,18 @@
 				4C8709DB1BE71C8C009F9261 /* RPFeedbackViewController.m in Sources */,
 				4C8709DD1BE71C8C009F9261 /* FeedbackViewController.m in Sources */,
 				4C8709DF1BE71C8C009F9261 /* PositiveReinforcementViewController.m in Sources */,
-				4C8709D71BE71C8C009F9261 /* BaseViewController.m in Sources */,
+				4C8709D71BE71C8C009F9261 /* RPBaseViewController.m in Sources */,
 				4CB3FD761BE32E74005E1496 /* Feedback.m in Sources */,
 				4C8709C11BE71C49009F9261 /* TransparentTableViewCell.m in Sources */,
-				4C8709BF1BE71C49009F9261 /* ActivityIndicatorButton.m in Sources */,
+				4C8709BF1BE71C49009F9261 /* RPActivityIndicatorButton.m in Sources */,
 				4C8709E31BE71D08009F9261 /* TPFloatRatingView.m in Sources */,
 				4C8709B91BE71C49009F9261 /* MessageView.m in Sources */,
 				4CB3FD601BE32C7C005E1496 /* RPFeedbackClient.m in Sources */,
-				4CB3FD7A1BE32E74005E1496 /* Location.m in Sources */,
+				4CB3FD7A1BE32E74005E1496 /* RPLocation.m in Sources */,
 				4C8709BB1BE71C49009F9261 /* MultipleLineTitle.m in Sources */,
 				4C8709C61BE71C66009F9261 /* PushTransition.m in Sources */,
 				4C8709D91BE71C8C009F9261 /* LocationManagerViewController.m in Sources */,
-				4CB3FD781BE32E74005E1496 /* ReviewSite.m in Sources */,
+				4CB3FD781BE32E74005E1496 /* RPReviewSite.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,9 +6,9 @@
 //  Copyright © 2015 Review Push. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "RPBaseViewController.h"
 #import "TPFloatRatingView.h"
-#import "ActivityIndicatorButton.h"
+#import "RPActivityIndicatorButton.h"
 #import "InsetTextField.h"
 #import "Feedback.h"
 #import "SZTextView.h"
@@ -18,7 +18,7 @@ typedef NS_ENUM(NSUInteger, ReviewStep) {
     ReviewStepAdditionalInformation
 };
 
-@interface FeedbackViewController : BaseViewController
+@interface FeedbackViewController : RPBaseViewController
 
 @property (nonatomic, strong) UILabel *textLabel;
 @property (nonatomic, strong) UILabel *poorLabel;
@@ -28,7 +28,7 @@ typedef NS_ENUM(NSUInteger, ReviewStep) {
 @property (nonatomic, strong) InsetTextField *nameTextField;
 @property (nonatomic, strong) InsetTextField *emailTextField;
 @property (nonatomic, strong) UIButton *dismissButton;
-@property (nonatomic, strong) ActivityIndicatorButton *submitButton;
+@property (nonatomic, strong) RPActivityIndicatorButton *submitButton;
 @property (nonatomic, strong) TPFloatRatingView *ratingView;
 @property (nonatomic, assign) ReviewStep reviewStep;
 @property (nonatomic, strong) Feedback *feedback;

@@ -6,17 +6,17 @@
 //  Copyright © 2015 Review Push. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "RPBaseViewController.h"
 #import "MessageView.h"
 
-@interface BaseViewController ()
+@interface RPBaseViewController ()
 
 @property (nonatomic, strong) UIActivityIndicatorView *activityIndicator;
 @property (nonatomic, strong) MessageView *messageView;
 
 @end
 
-@implementation BaseViewController
+@implementation RPBaseViewController
 
 #pragma mark - View lifecycle 
 

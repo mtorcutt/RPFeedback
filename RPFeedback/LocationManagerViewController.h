@@ -6,10 +6,10 @@
 //  Copyright © 2015 Review Push. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "RPBaseViewController.h"
 #import "Feedback.h"
 
-@interface LocationManagerViewController : BaseViewController
+@interface LocationManagerViewController : RPBaseViewController
 
 @property (nonatomic, strong) Feedback *feedback;
 

@@ -11,7 +11,7 @@
 #import <CoreLocation/CoreLocation.h>
 
 #import "Feedback.h"
-#import "Location.h"
+#import "RPLocation.h"
 
 @interface RPFeedbackClient : AFHTTPRequestOperationManager
 
@@ -57,9 +57,9 @@
  * required property on location
  * is identifier.
  */
-- (void)GETLocation:(Location *)location
+- (void)GETLocation:(RPLocation *)location
          completion:(void(^)(BOOL success,
-                             Location *location,
+                             RPLocation *location,
                              NSString *errorMessage))completionBlock;
 
 @end

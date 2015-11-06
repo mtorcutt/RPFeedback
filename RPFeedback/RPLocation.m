@@ -6,10 +6,10 @@
 //  Copyright © 2015 Review Push. All rights reserved.
 //
 
-#import "Location.h"
+#import "RPLocation.h"
 #import <UIKit/UIKit.h>
 
-@implementation Location
+@implementation RPLocation
 
 + (BOOL)propertyIsOptional:(NSString *)propertyName {
     return YES;

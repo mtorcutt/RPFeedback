@@ -101,7 +101,7 @@ CGFloat const StatusBarHeight = 15.0;
     
     [self.view addSubview:self.textView];
     
-    self.submitButton = [ActivityIndicatorButton buttonWithType:UIButtonTypeSystem];
+    self.submitButton = [RPActivityIndicatorButton buttonWithType:UIButtonTypeSystem];
     
     [self.submitButton.titleLabel setFont:[UIFont fontWithName:@"AvenirNext-DemiBold" size:16.0]];
     [self.submitButton.layer setBorderWidth:2.0];

@@ -109,9 +109,9 @@ NSString * const ReviewPushLocationFormatURLString = @"locations/%@";
     }];
 }
 
-#pragma mark - Locations
+#pragma mark - RPLocations
 
-- (void)GETLocationsNearLocation:(CLLocation *)location
+- (void)GETRPLocationsNearRPLocation:(CLLocation *)location
                       completion:(void(^)(BOOL success,
                                           NSArray *locations,
                                           NSString *errorMessage))completionBlock {
@@ -140,7 +140,7 @@ NSString * const ReviewPushLocationFormatURLString = @"locations/%@";
                 
                 NSError *error = nil;
                 
-                Location *location = [[Location alloc] initWithDictionary:obj error:&error];
+                RPLocation *location = [[RPLocation alloc] initWithDictionary:obj error:&error];
                 
                 [locations addObject:location];
                 
@@ -162,8 +162,8 @@ NSString * const ReviewPushLocationFormatURLString = @"locations/%@";
 
 }
 
-- (void)GETLocation:(Location *)location
-         completion:(void(^)(BOOL success, Location *location, NSString *errorMessage))completionBlock {
+- (void)GETRPLocation:(RPLocation *)location
+         completion:(void(^)(BOOL success, RPLocation *location, NSString *errorMessage))completionBlock {
     
     NSDictionary *parameters = [self authorizedParameterDictionaryWithDictionary:nil];
     
@@ -179,7 +179,7 @@ NSString * const ReviewPushLocationFormatURLString = @"locations/%@";
             
             NSError *error = nil;
                 
-            Location *location = [[Location alloc] initWithDictionary:responseObject[@"data"] error:&error];
+            RPLocation *location = [[RPLocation alloc] initWithDictionary:responseObject[@"data"] error:&error];
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 if(error) {

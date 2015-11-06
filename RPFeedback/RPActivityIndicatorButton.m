@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 ReviewPush. All rights reserved.
 //
 
-#import "ActivityIndicatorButton.h"
+#import "RPActivityIndicatorButton.h"
 
-@implementation ActivityIndicatorButton
+@implementation RPActivityIndicatorButton
 
 - (void)setActivityIndicatorViewShowing:(BOOL)activityIndicatorViewShowing {
 

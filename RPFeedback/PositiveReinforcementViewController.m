@@ -10,7 +10,7 @@
 
 #import "TransparentTableViewCell.h"
 #import "MultipleLineTitle.h"
-#import "ReviewSite.h"
+#import "RPReviewSite.h"
 
 NSString * const PositiveReinforcementViewControllerTableViewCellIdentifier = @"PositiveReinforcementViewControllerTableViewCellIdentifier";
 
@@ -74,7 +74,7 @@ NSString * const PositiveReinforcementViewControllerTableViewCellIdentifier = @"
                                                           BOOL * _Nonnull stop)
     {
         
-        ReviewSite *site = [ReviewSite new];
+        RPReviewSite *site = [RPReviewSite new];
         site.title       = key;
         site.link        = [obj valueForKey:@"url"];
         
@@ -158,7 +158,7 @@ NSString * const PositiveReinforcementViewControllerTableViewCellIdentifier = @"
     TransparentTableViewCell *cell
     = [tableView dequeueReusableCellWithIdentifier:PositiveReinforcementViewControllerTableViewCellIdentifier];
     
-    ReviewSite *site = self.dataSource[indexPath.row];
+    RPReviewSite *site = self.dataSource[indexPath.row];
     
     cell.textLabel.text = site.title;
     
@@ -176,7 +176,7 @@ NSString * const PositiveReinforcementViewControllerTableViewCellIdentifier = @"
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    ReviewSite *site = self.dataSource[indexPath.row];
+    RPReviewSite *site = self.dataSource[indexPath.row];
 
     if([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:site.link]]) {
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:site.link]];
