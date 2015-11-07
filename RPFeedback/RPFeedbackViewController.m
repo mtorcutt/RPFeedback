@@ -30,17 +30,6 @@
     return self;
 }
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    
-    NSAssert(nil, @"Please use initWithFeedback:(Feedback *)feedback APIKey:(NSString *)APIKey APISecret:(NSString *)APISecret to intialize this view controller.");
-    
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        
-    }
-    return self;
-}
-
 - (id)initWithCoder:(NSCoder *)aDecoder {
     
     NSAssert(nil, @"Please use initWithFeedback:(Feedback *)feedback APIKey:(NSString *)APIKey APISecret:(NSString *)APISecret to intialize this view controller.");
@@ -65,7 +54,7 @@
 
 #pragma mark - Initialization
 
-- (id)initWithFeedback:(RPFeedback *)feedback
+- (id)initWithFeedback:(Feedback *)feedback
                 APIKey:(NSString *)APIKey
              APISecret:(NSString *)APISecret {
     
@@ -73,6 +62,10 @@
     viewController.feedback                       = feedback;
     viewController.APISecret                      = APISecret;
     viewController.APIKey                         = APISecret;
+
+    if(feedback == nil) {
+        NSAssert(nil, @"feedback cannot be nil.");
+    }
     
     self = [super initWithRootViewController:viewController];
     if (self) {
