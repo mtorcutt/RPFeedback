@@ -12,6 +12,7 @@
 #import "InsetTextField.h"
 #import "Feedback.h"
 #import "SZTextView.h"
+#import "EDStarRating.h"
 
 typedef NS_ENUM(NSUInteger, ReviewStep) {
     ReviewStepRate,

@@ -140,8 +140,11 @@ NSString * const LocationManagerViewControllerTableViewCellIdentifier = @"Locati
              self.feedback.location = location;
             
              FeedbackViewController *feedbackViewController = [FeedbackViewController new];
-             feedbackViewController.feedback                = self.feedback;
              
+             feedbackViewController.feedback  = self.feedback;
+             feedbackViewController.APIKey    = self.APIKey;
+             feedbackViewController.APISecret = self.APISecret;
+
              [self.navigationController pushViewController:feedbackViewController animated:YES];
             
          } else {
@@ -158,7 +161,8 @@ NSString * const LocationManagerViewControllerTableViewCellIdentifier = @"Locati
 - (void)refreshLocations {
     
     [self displayActivityIndicatorViewAnimated:NO];
-
+    [self removeMessageViewAnimated:NO];
+    
     __block dispatch_group_t group = dispatch_group_create();
     
     __block BOOL locationSuccess = YES;
@@ -186,11 +190,12 @@ NSString * const LocationManagerViewControllerTableViewCellIdentifier = @"Locati
         
         if(locationSuccess == NO) {
             [self displayMessageViewAnimated:YES
-                                       image:nil
-                                       title:@"Location Error"
+                                       image:[[UIImage imageNamed:@"thumbs-down~63x63"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]                                       title:@"Location Error"
                                   detailText:@"We could not retrieve your location."
-                                 buttonTitle:nil
-                                buttonTapped:nil];
+                                 buttonTitle:@"Retry"
+                                buttonTapped:^{
+                                    [self refreshLocations];
+                                }];
             [self removeActivityIndicatorViewAnimated:YES];
             return;
         }
@@ -211,7 +216,9 @@ NSString * const LocationManagerViewControllerTableViewCellIdentifier = @"Locati
                      
                      self.feedback.location = [self.locations firstObject];
                      
-                     feedbackViewController.feedback = self.feedback;
+                     feedbackViewController.feedback  = self.feedback;
+                     feedbackViewController.APIKey    = self.APIKey;
+                     feedbackViewController.APISecret = self.APISecret;
                      
                      [self.navigationController pushViewController:feedbackViewController animated:YES];
                      
@@ -219,18 +226,18 @@ NSString * const LocationManagerViewControllerTableViewCellIdentifier = @"Locati
                      
                      [self removeActivityIndicatorViewAnimated:YES];
                      [self displayMessageViewAnimated:YES
-                                                image:nil
+                                                image:[[UIImage imageNamed:@"thumbs-down~63x63"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]
                                                 title:@"Locations"
                                            detailText:@"No locations were returned."
                                           buttonTitle:nil
-                                         buttonTapped:nil];
+                                         buttonTapped:^{
+
+                                         }];
                      
                  } else {
                      
-                     RPLocation *location = [self.locations firstObject];
-                     
-                     self.titleView.textLabel.text       = location.name;
-                     self.titleView.detailTextLabel.text = @"Please select your location.";
+                     self.titleView.textLabel.text       = @"Which location would you like to review?";
+                     self.titleView.detailTextLabel.text = @"Please select one below.";
                      
                      [self layoutSubviews];
                      [self.tableView reloadData];
@@ -248,11 +255,13 @@ NSString * const LocationManagerViewControllerTableViewCellIdentifier = @"Locati
 
                  [self removeActivityIndicatorViewAnimated:YES];
                  [self displayMessageViewAnimated:YES
-                                            image:nil
+                                            image:[[UIImage imageNamed:@"thumbs-down~63x63"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate]
                                             title:@"Locations"
                                        detailText:@"There was an error. We could not retrieve any locations at the moment."
-                                      buttonTitle:nil
-                                     buttonTapped:nil];
+                                      buttonTitle:@"Retry"
+                                     buttonTapped:^{
+                                         [self refreshLocations];
+                                     }];
                  return;
 
              }
@@ -310,7 +319,9 @@ NSString * const LocationManagerViewControllerTableViewCellIdentifier = @"Locati
     
     self.feedback.location = self.locations[indexPath.row];
     
-    feedbackViewController.feedback = self.feedback;
+    feedbackViewController.feedback  = self.feedback;
+    feedbackViewController.APIKey    = self.APIKey;
+    feedbackViewController.APISecret = self.APISecret;
     
     [self.navigationController pushViewController:feedbackViewController animated:YES];
 }

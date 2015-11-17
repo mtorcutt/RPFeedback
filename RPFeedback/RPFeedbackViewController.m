@@ -61,7 +61,7 @@
     LocationManagerViewController *viewController = [LocationManagerViewController new];
     viewController.feedback                       = feedback;
     viewController.APISecret                      = APISecret;
-    viewController.APIKey                         = APISecret;
+    viewController.APIKey                         = APIKey;
 
     if(feedback == nil) {
         NSAssert(nil, @"feedback cannot be nil.");
@@ -84,6 +84,7 @@
     // Get rid of the navigation bar,
     // but we still want it for
     // navigation bar button items
+    [self.navigationBar setTranslucent:YES];
     [self.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
     [self.navigationBar setBackgroundColor:[UIColor clearColor]];
     [self.navigationBar setShadowImage:[UIImage new]];

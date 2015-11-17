@@ -21,6 +21,7 @@
         self.imageView                        = [UIImageView new];
         self.imageView.contentMode            = UIViewContentModeCenter;
         self.imageView.userInteractionEnabled = YES;
+        self.imageView.tintColor              = [UIColor colorWithWhite:0.0 alpha:.75];
         
         [self addSubview:self.imageView];
 
@@ -42,7 +43,10 @@
         
         self.refreshButton = [UIButton buttonWithType:UIButtonTypeSystem];
         
-        [self.refreshButton setBackgroundColor:[UIColor redColor]];
+        UIColor *backgroundColor
+        = [UIColor colorWithRed:27.0/255.0 green:190.0/255.0 blue:134.0/255.0 alpha:1.0];
+
+        [self.refreshButton setBackgroundColor:backgroundColor];
         [self.refreshButton.titleLabel setFont:[UIFont systemFontOfSize:15.0]];
         [self.refreshButton setContentEdgeInsets:UIEdgeInsetsMake(12.0, 12.0, 12.0, 12.0)];
         [self.refreshButton setTintColor:[UIColor whiteColor]];
@@ -105,6 +109,8 @@
         
         buttonFrame.size     = self.refreshButton.bounds.size;
         buttonFrame.origin.x = floorf((boundsSize.width - buttonFrame.size.width)/2.0);
+    
+        self.refreshButton.layer.cornerRadius = buttonFrame.size.height/2.0;
     }
     
     // Calculate y offsets

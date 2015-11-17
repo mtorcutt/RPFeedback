@@ -79,7 +79,6 @@ NSString * const ReviewPushLocationFormatURLString = @"locations/%@";
     
     [self POST:ReviewPushFeedbackURLString parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
-        
         if(!completionBlock) {
             return;
         }
@@ -111,7 +110,7 @@ NSString * const ReviewPushLocationFormatURLString = @"locations/%@";
 
 #pragma mark - RPLocations
 
-- (void)GETRPLocationsNearRPLocation:(CLLocation *)location
+- (void)GETLocationsNearLocation:(CLLocation *)location
                       completion:(void(^)(BOOL success,
                                           NSArray *locations,
                                           NSString *errorMessage))completionBlock {
@@ -127,6 +126,8 @@ NSString * const ReviewPushLocationFormatURLString = @"locations/%@";
     }
     
     [self GET:ReviewPushLocationURLString parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        NSLog(@"responseObject %@", responseObject);
         
         if(!completionBlock) {
             return;
@@ -154,6 +155,9 @@ NSString * const ReviewPushLocationFormatURLString = @"locations/%@";
      
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         
+        NSLog(@"operation.responseObject %@", operation.responseObject);
+        NSLog(@"error %@", error);
+
         if(completionBlock) {
             completionBlock(NO, nil, nil);
         }
@@ -162,8 +166,10 @@ NSString * const ReviewPushLocationFormatURLString = @"locations/%@";
 
 }
 
-- (void)GETRPLocation:(RPLocation *)location
-         completion:(void(^)(BOOL success, RPLocation *location, NSString *errorMessage))completionBlock {
+- (void)GETLocation:(RPLocation *)location
+         completion:(void(^)(BOOL success,
+                             RPLocation *location,
+                             NSString *errorMessage))completionBlock {
     
     NSDictionary *parameters = [self authorizedParameterDictionaryWithDictionary:nil];
     

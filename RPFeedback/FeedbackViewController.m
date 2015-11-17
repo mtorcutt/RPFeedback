@@ -11,8 +11,8 @@
 #import "RPFeedbackClient.h"
 #import "PositiveReinforcementViewController.h"
 
-CGFloat const ContentWidth    = 280.0;
-CGFloat const TextViewHeight  = 120.0;
+CGFloat const ContentWidth    = 300.0;
+CGFloat const TextViewHeight  = 100.0;
 CGFloat const TextFieldHeight = 44.0;
 CGFloat const Padding         = 15.0;
 CGFloat const StatusBarHeight = 15.0;
@@ -22,6 +22,7 @@ CGFloat const StatusBarHeight = 15.0;
 @property (nonatomic, assign) CGSize keyboardSize;
 @property (nonatomic, assign) BOOL hideUserInformationFields;
 @property (nonatomic, assign) UIStatusBarStyle statusBarStyle;
+@property (nonatomic, strong) UIView *topViewsContainer;
 
 @end
 
@@ -46,26 +47,48 @@ CGFloat const StatusBarHeight = 15.0;
 - (void)loadView {
     [super loadView];
     
+    self.view = [UIScrollView new];
+    
+    [(UIScrollView *)self.view setShowsVerticalScrollIndicator:NO];
+
     self.insertDismissButton = YES;
     
     // Create all subviews (minus user information fields – these
     // will be created in the hideUserInformationFields boolean
     // setter
+    self.topViewsContainer = [UIView new];
+    
+    [self.view addSubview:self.topViewsContainer];
+    
     self.textLabel               = [UILabel new];
-    self.textLabel.font          = [UIFont systemFontOfSize:19.0];
-    self.textLabel.text          = [NSString stringWithFormat:@"How do you like %@?", self.feedback.location.name];;
+    self.textLabel.font          = [UIFont systemFontOfSize:22.0];
+    self.textLabel.text          = [NSString stringWithFormat:@"Please rate your experience at %@ below.", self.feedback.location.name];;
     self.textLabel.numberOfLines = 0;
     self.textLabel.textColor     = [UIColor whiteColor];
     self.textLabel.textAlignment = NSTextAlignmentCenter;
-    
+    self.textLabel.transform     = CGAffineTransformMakeScale(.90, .90);
+
     [self.view addSubview:self.textLabel];
     
     self.ratingView                    = [TPFloatRatingView new];
+    
+//    _starRating.starImage = [[UIImage imageNamed:@"star-template"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+//    _starRating.starHighlightedImage = [[UIImage imageNamed:@"star-highlighted-template"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
+//    _starRating.maxRating = 5.0;
+//    _starRating.delegate = self;
+//    _starRating.horizontalMargin = 15.0;
+//    _starRating.editable=YES;
+//    _starRating.rating= 2.5;
+//    _starRating.displayMode=EDStarRatingDisplayHalf;
+//    [_starRating  setNeedsDisplay];
+//    _starRating.tintColor = self.colors[0];
+
     self.ratingView.emptySelectedImage = [UIImage imageNamed:@"star"];
     self.ratingView.fullSelectedImage  = [UIImage imageNamed:@"star-full"];
     self.ratingView.delegate           = self;
     self.ratingView.editable           = YES;
-    
+//    self.ratingView.transform          = CGAffineTransformMakeScale(.75, .75);
+
     [self.view addSubview:self.ratingView];
     
     self.poorLabel               = [UILabel new];
@@ -146,6 +169,8 @@ CGFloat const StatusBarHeight = 15.0;
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     
+    [(UIScrollView *)self.view setContentSize:self.view.bounds.size];
+    
     // Layout dismiss button
     CGRect dismissButtonFrame = CGRectZero;
     dismissButtonFrame.size   = [self.dismissButton sizeThatFits:self.view.bounds.size];
@@ -161,8 +186,7 @@ CGFloat const StatusBarHeight = 15.0;
 - (void)layoutRatingView {
     
     // Layout setup
-    CGSize viewBoundsSize  = self.view.bounds.size;
-    viewBoundsSize.height -= self.keyboardSize.height;
+    CGSize viewBoundsSize = self.view.bounds.size;
     
     CGSize maxLabelSize = CGSizeMake(viewBoundsSize.width - (Padding * 2.0), CGFLOAT_MAX);
     
@@ -176,9 +200,11 @@ CGFloat const StatusBarHeight = 15.0;
     textLabelFrame.origin.x
     = (viewBoundsSize.width - textLabelFrame.size.width)/2.0;
     
+    UIImage *starImage = [UIImage imageNamed:@"star-full"];
+    
     // ratingView frame
     CGRect ratingViewFrame   = CGRectZero;
-    ratingViewFrame.size     = CGSizeMake((ContentWidth - Padding * 2.0), self.ratingView.emptySelectedImage.size.height);
+    ratingViewFrame.size     = CGSizeMake((ContentWidth - Padding * 2.0), starImage.size.height);
     ratingViewFrame.origin.x = (viewBoundsSize.width - ratingViewFrame.size.width)/2.0;
 
     // Text view and text field
@@ -201,20 +227,20 @@ CGFloat const StatusBarHeight = 15.0;
         = (viewBoundsSize.height
            - textLabelFrame.size.height
            - Padding
-           - self.ratingView.emptySelectedImage.size.height)/2.0;
+           - starImage.size.height)/2.0;
     } else if(self.hideUserInformationFields) {
         textLabelFrame.origin.y
         = (viewBoundsSize.height
            - textLabelFrame.size.height
            - Padding
-           - self.ratingView.emptySelectedImage.size.height
+           - starImage.size.height
            - textViewFrame.size.height)/2.0;
     } else {
         textLabelFrame.origin.y
         = (viewBoundsSize.height
            - textLabelFrame.size.height
            - Padding * 3.0
-           - self.ratingView.emptySelectedImage.size.height
+           - starImage.size.height
            - emailTextFieldFrame.size.height
            - nameTextFieldFrame.size.height
            - textViewFrame.size.height)/2.0;
@@ -224,7 +250,7 @@ CGFloat const StatusBarHeight = 15.0;
     
     // Get star to layout star
     // description labels
-    CGSize starSize = [[(UIImageView *)self.ratingView.emptyImageViews[0] image] size];
+    CGSize starSize = starImage.size;
 
     CGRect poorLabelFrame   = CGRectZero;
     poorLabelFrame.origin.y = (CGRectGetMaxY(ratingViewFrame) + 5.0);
@@ -269,7 +295,7 @@ CGFloat const StatusBarHeight = 15.0;
     
     CGRect submitButtonFrame = CGRectZero;
     submitButtonFrame.size   = [self.submitButton sizeThatFits:viewBoundsSize];
-    submitButtonFrame.size.width = 280.0;
+    submitButtonFrame.size.width = ContentWidth;
     submitButtonFrame.origin = CGPointMake((viewBoundsSize.width - submitButtonFrame.size.width)/2.0, CGRectGetMaxY(emailTextFieldFrame) + 15.0);
     
     self.submitButton.frame = submitButtonFrame;
@@ -286,7 +312,7 @@ CGFloat const StatusBarHeight = 15.0;
     
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationBeginsFromCurrentState:YES];
-    [self layoutRatingView];
+    [(UIScrollView *)self.view setContentInset:UIEdgeInsetsMake(0.0, 0.0, self.keyboardSize.height, 0.0)];
     [UIView commitAnimations];
 }
 
@@ -296,7 +322,7 @@ CGFloat const StatusBarHeight = 15.0;
     
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationBeginsFromCurrentState:YES];
-    [self layoutRatingView];
+    [(UIScrollView *)self.view setContentInset:UIEdgeInsetsZero];
     [UIView commitAnimations];
 }
 
@@ -326,8 +352,22 @@ CGFloat const StatusBarHeight = 15.0;
 
     [self helpTheViewsForRatingView:ratingView rating:rating];
     
+    CGPoint center = self.textLabel.center;
+    center.x       = self.view.center.x;
+    
+    CGFloat scaleFactor = 1.0;
+    CGFloat x_delta = self.textLabel.frame.size.width * (1-scaleFactor);
+    CGFloat y_delta = self.textLabel.frame.size.height * (1-scaleFactor);
+
+    CGAffineTransform transform = CGAffineTransformMakeTranslation(0, 0.0);
+    transform = CGAffineTransformScale(transform, scaleFactor, scaleFactor);
+    transform = CGAffineTransformTranslate(transform, -x_delta, -y_delta);
+
     [UIView animateWithDuration:.35 animations:^{
         [self setReviewStep:ReviewStepAdditionalInformation animated:YES];
+        
+        self.textLabel.transform = CGAffineTransformIdentity;
+        self.ratingView.transform = CGAffineTransformIdentity;
     } completion:^(BOOL finished) {
         if(finished == NO) {
             return;
@@ -370,6 +410,7 @@ CGFloat const StatusBarHeight = 15.0;
 
 - (void)handleSubmit:(id)sender {
     
+    self.submitButton.userInteractionEnabled = NO;
     self.submitButton.activityIndicatorViewShowing = YES;
     
     RPFeedbackClient *feedbackClient
@@ -381,7 +422,7 @@ CGFloat const StatusBarHeight = 15.0;
                                    NSDictionary *reviewSiteLinks,
                                    NSString *errorString) {
 
-        if(success && reviewSiteLinks != nil) {
+        if(success && [reviewSiteLinks isKindOfClass:[NSDictionary class]]) {
             
             PositiveReinforcementViewController *viewController
             = [PositiveReinforcementViewController new];
@@ -390,6 +431,10 @@ CGFloat const StatusBarHeight = 15.0;
             [self.navigationController pushViewController:viewController animated:YES];
             
         } else if(success) {
+            
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success!" message:@"Thank you for submitting your review." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            
+            [alert show];
             
             [self handleDismissButton:nil];
             
@@ -431,6 +476,7 @@ CGFloat const StatusBarHeight = 15.0;
         }
 
         self.submitButton.activityIndicatorViewShowing = NO;
+        self.submitButton.userInteractionEnabled       = YES;
 
     }];
 }

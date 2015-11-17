@@ -125,6 +125,8 @@
     [self.messageView.refreshButton setTitle:buttonTitle
                                     forState:UIControlStateNormal];
     
+    self.messageView.imageView.tintColor = [UIColor colorWithWhite:1.0 alpha:.55];
+    
     [self layoutMessageView];
     [self.messageView layoutSubviews];
     
@@ -135,7 +137,7 @@
     };
     
     if(animated) {
-        [UIView animateWithDuration:.35 animations:^{
+        [UIView animateWithDuration:.20 animations:^{
             self.messageView.alpha = 1.0;
         }];
     }
@@ -144,9 +146,13 @@
 - (void)removeMessageViewAnimated:(BOOL)animated
 {
     if(animated) {
-        [UIView animateWithDuration:.35 animations:^{
+        [UIView animateWithDuration:.20 animations:^{
             self.messageView.alpha = 0.0;
         } completion:^(BOOL finished) {
+            if(finished == NO) {
+                return;
+            }
+            [self.messageView removeFromSuperview];
             self.messageView = nil;
         }];
     } else {
@@ -187,7 +193,7 @@
             return;
         }
 
-        [self dismissViewControllerAnimated:NO completion:nil];
+        [self.navigationController dismissViewControllerAnimated:NO completion:nil];
     }];
 }
 
