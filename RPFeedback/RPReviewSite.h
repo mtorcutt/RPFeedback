@@ -6,7 +6,7 @@
 //  Copyright © 2015 Review Push. All rights reserved.
 //
 
-#import "JSONModel.h"
+#import <JSONModel/JSONModel.h>
 
 @interface RPReviewSite : JSONModel
 
